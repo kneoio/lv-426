@@ -1,13 +1,17 @@
 import os
 import requests
 from dotenv import load_dotenv
+from urllib.parse import urljoin
 
 load_dotenv()
 api_token = os.getenv('API_TOKEN')
+api_host = os.getenv('API_HOST')
 
+if not api_host:
+    raise ValueError("API_HOST not found in environment variables")
 
 def check_uploaded_sound_fragments():
-    url = "http://localhost:38707/api/soundfragments"
+    url = urljoin(api_host, "api/soundfragments")
 
     try:
         response = requests.get(
