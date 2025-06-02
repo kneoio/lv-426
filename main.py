@@ -1,6 +1,7 @@
 import os
-import requests
+import subprocess
 from dotenv import load_dotenv
+import json
 
 # Load environment variables
 load_dotenv()
@@ -8,30 +9,28 @@ load_dotenv()
 # Get the API token from .env
 api_token = os.getenv('API_TOKEN')
 
-if not api_token:
-    raise ValueError("API token not found in .env file")
-
 # API endpoint
 url = "http://localhost:38707/api/soundfragments"
 
-# Make the request with query parameters
-response = requests.get(
-    url,
-    headers={
-        'Authorization': f'Bearer {api_token}'
-    },
-    params={
-        'limit': 100,
-        'offset': 0,
-        'sourceType': 'LOCAL'
-    }
+# Using curl
+result = subprocess.run(
+    ['curl',
+     '--request', 'GET',
+     '--url', f'{url}?limit=100&offset=0&sourceType=LOCAL',
+     '--header', f'authorization: Bearer {api_token}'],
+    capture_output=True, text=True
 )
 
-# Check response status
-if response.status_code == 200:
-    print("Request successful!")
-    data = response.json()
-    print("Response data:", data)
+if result.returncode == 0:
+    try:
+        data = json.loads(result.stdout)
+        entries = data['payload']['viewData']['entries']
+        print(f"\nFound {len(entries)} entries:")
+        for entry in entries:
+            print(f"{entry['title']} by {entry['artist']}")
+    except Exception as e:
+        print(f"\nError: {str(e)}")
+        print("Raw response:")
+        print(result.stdout)
 else:
-    print(f"Request failed with status code {response.status_code}")
-    print("Error:", response.text)
+        print("\nError:", result.stderr)
