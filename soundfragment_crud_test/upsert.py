@@ -11,11 +11,11 @@ def save_response_data(data, filename='soundfragment_data.json'):
 def upsert_soundfragment(api_host, api_key, payload=None):
     if payload is None:
         payload = {
-            "title": "sleeping lala",
+            "title": "sleeping cycle",
             "artist": "luliu",
             "genre": "Funk",
             "type": "SONG",
-            "newlyUploaded": ["lala.mp3"]
+            "newlyUploaded": ["Sleeping_cycle.wav"]
         }
     
     headers = {

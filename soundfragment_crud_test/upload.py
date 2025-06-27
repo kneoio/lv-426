@@ -4,7 +4,8 @@ import requests
 from pathlib import Path
 from dotenv import load_dotenv
 
-FILENAME = "lala.mp3"
+#FILENAME = "lala.mp3"
+FILENAME = "Sleeping_cycle.wav"
 
 def upload_file(file_path, api_url, api_token):
     try:
