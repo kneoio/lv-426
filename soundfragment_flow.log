@@ -1,0 +1,121 @@
+2025-06-27 22:07:17 [INFO] __main__: Starting file upload: lala.mp3
+2025-06-27 22:07:17 [ERROR] __main__: File upload failed: [Errno 2] No such file or directory: 'lala.mp3'
+Traceback (most recent call last):
+  File "c:\Users\justa\CascadeProjects\lv-426\soundfragment_crud_test\orchestrator.py", line 76, in upload_file
+    with open(self.file_path, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'lala.mp3'
+2025-06-27 22:07:17 [CRITICAL] __main__: Flow failed: [Errno 2] No such file or directory: 'lala.mp3'
+2025-06-27 22:08:13 [INFO] __main__: Using audio file: c:\Users\justa\CascadeProjects\lv-426\soundfragment_crud_test\lala.mp3
+2025-06-27 22:08:13 [INFO] __main__: Starting file upload: lala.mp3
+2025-06-27 22:08:13 [ERROR] __main__: File upload failed: [Errno 2] No such file or directory: 'c:\\Users\\justa\\CascadeProjects\\lv-426\\soundfragment_crud_test\\lala.mp3'
+Traceback (most recent call last):
+  File "c:\Users\justa\CascadeProjects\lv-426\soundfragment_crud_test\orchestrator.py", line 76, in upload_file
+    with open(self.file_path, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\Users\\justa\\CascadeProjects\\lv-426\\soundfragment_crud_test\\lala.mp3'
+2025-06-27 22:08:13 [CRITICAL] __main__: Flow failed: [Errno 2] No such file or directory: 'c:\\Users\\justa\\CascadeProjects\\lv-426\\soundfragment_crud_test\\lala.mp3'
+2025-06-27 22:09:35 [INFO] __main__: Using audio file: C:/Users/justa/Music\lala.mp3
+2025-06-27 22:09:35 [INFO] __main__: Starting file upload: lala.mp3
+2025-06-27 22:09:35 [ERROR] __main__: File upload failed: name 'requests' is not defined
+Traceback (most recent call last):
+  File "c:\Users\justa\CascadeProjects\lv-426\soundfragment_crud_test\orchestrator.py", line 80, in upload_file
+    response = requests.post(
+               ^^^^^^^^
+NameError: name 'requests' is not defined
+2025-06-27 22:09:35 [CRITICAL] __main__: Flow failed: name 'requests' is not defined
+2025-06-27 22:11:42 [INFO] __main__: Using audio file: C:/Users/justa/Music\lala.mp3
+2025-06-27 22:11:42 [INFO] __main__: Starting file upload: lala.mp3
+2025-06-27 22:11:42 [ERROR] __main__: File upload failed: name 'requests' is not defined
+Traceback (most recent call last):
+  File "C:\Users\justa\CascadeProjects\lv-426\soundfragment_crud_test\orchestrator.py", line 80, in upload_file
+    response = requests.post(
+               ^^^^^^^^
+NameError: name 'requests' is not defined
+2025-06-27 22:11:42 [CRITICAL] __main__: Flow failed: name 'requests' is not defined
+2025-06-27 22:12:04 [INFO] __main__: Using audio file: C:/Users/justa/Music\lala.mp3
+2025-06-27 22:12:04 [INFO] __main__: Starting file upload: lala.mp3
+2025-06-27 22:12:04 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): localhost:38707
+2025-06-27 22:12:06 [DEBUG] urllib3.connectionpool: http://localhost:38707 "POST /api/upload HTTP/1.1" 500 94
+2025-06-27 22:12:06 [ERROR] __main__: File upload failed: 500 Server Error: Internal Server Error for url: http://localhost:38707/api/upload
+Traceback (most recent call last):
+  File "C:\Users\justa\CascadeProjects\lv-426\soundfragment_crud_test\orchestrator.py", line 86, in upload_file
+    response.raise_for_status()
+  File "C:\Users\justa\CascadeProjects\lv-426\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://localhost:38707/api/upload
+2025-06-27 22:12:06 [CRITICAL] __main__: Flow failed: 500 Server Error: Internal Server Error for url: http://localhost:38707/api/upload
+2025-06-27 22:12:37 [INFO] __main__: Using audio file: C:/Users/justa/Music\lala.mp3
+2025-06-27 22:12:37 [INFO] __main__: Starting file upload: lala.mp3
+2025-06-27 22:12:37 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): localhost:38707
+2025-06-27 22:12:39 [DEBUG] urllib3.connectionpool: http://localhost:38707 "POST /api/upload HTTP/1.1" 500 94
+2025-06-27 22:12:39 [ERROR] __main__: File upload failed: 500 Server Error: Internal Server Error for url: http://localhost:38707/api/upload
+Traceback (most recent call last):
+  File "C:\Users\justa\CascadeProjects\lv-426\soundfragment_crud_test\orchestrator.py", line 86, in upload_file
+    response.raise_for_status()
+  File "C:\Users\justa\CascadeProjects\lv-426\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://localhost:38707/api/upload
+2025-06-27 22:12:39 [CRITICAL] __main__: Flow failed: 500 Server Error: Internal Server Error for url: http://localhost:38707/api/upload
+2025-06-27 22:13:14 [INFO] __main__: Using audio file: C:/Users/justa/Music\lala.mp3
+2025-06-27 22:13:14 [INFO] __main__: Starting file upload: lala.mp3
+2025-06-27 22:13:14 [DEBUG] __main__: Uploading to: http://localhost:38707/api/soundfragments/upload
+2025-06-27 22:13:14 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): localhost:38707
+2025-06-27 22:13:16 [DEBUG] urllib3.connectionpool: http://localhost:38707 "POST /api/soundfragments/upload HTTP/1.1" 400 40
+2025-06-27 22:13:16 [DEBUG] __main__: Upload response: 400 - Request body must be a valid JSON object
+2025-06-27 22:13:16 [ERROR] __main__: File upload failed: 400 Client Error: Bad Request for url: http://localhost:38707/api/soundfragments/upload
+Traceback (most recent call last):
+  File "C:\Users\justa\CascadeProjects\lv-426\soundfragment_crud_test\orchestrator.py", line 92, in upload_file
+    response.raise_for_status()
+  File "C:\Users\justa\CascadeProjects\lv-426\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://localhost:38707/api/soundfragments/upload
+2025-06-27 22:13:16 [CRITICAL] __main__: Flow failed: 400 Client Error: Bad Request for url: http://localhost:38707/api/soundfragments/upload
+2025-06-27 22:13:52 [INFO] __main__: Using audio file: C:/Users/justa/Music\lala.mp3
+2025-06-27 22:13:52 [INFO] __main__: Starting file upload: lala.mp3
+2025-06-27 22:13:52 [DEBUG] __main__: Uploading to: http://localhost:38707/api/soundfragments/files/temp
+2025-06-27 22:13:52 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): localhost:38707
+2025-06-27 22:13:54 [DEBUG] urllib3.connectionpool: http://localhost:38707 "POST /api/soundfragments/files/temp HTTP/1.1" 200 197
+2025-06-27 22:13:54 [DEBUG] __main__: Upload response: 200 - {"id":"1360df28-3d1e-4614-9a6c-c421f96f40d6","name":"lala.mp3","status":"uploading","url":null,"percentage":0,"batchId":"temp","thumbnailUrl":null,"type":"application/octet-stream","fullPath":null}
+2025-06-27 22:13:54 [INFO] __main__: File uploaded successfully. ID: 1360df28-3d1e-4614-9a6c-c421f96f40d6
+2025-06-27 22:13:54 [INFO] __main__: Starting sound fragment upsert
+2025-06-27 22:13:54 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): localhost:38707
+2025-06-27 22:13:56 [DEBUG] urllib3.connectionpool: http://localhost:38707 "POST /api/soundfragments/ HTTP/1.1" 400 139
+2025-06-27 22:13:56 [ERROR] __main__: Sound fragment upsert failed: 400 Client Error: Bad Request for url: http://localhost:38707/api/soundfragments/
+Traceback (most recent call last):
+  File "C:\Users\justa\CascadeProjects\lv-426\soundfragment_crud_test\orchestrator.py", line 121, in upsert_soundfragment
+    response.raise_for_status()
+  File "C:\Users\justa\CascadeProjects\lv-426\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://localhost:38707/api/soundfragments/
+2025-06-27 22:13:56 [CRITICAL] __main__: Flow failed: 400 Client Error: Bad Request for url: http://localhost:38707/api/soundfragments/
+2025-06-27 22:15:28 [INFO] __main__: Using audio file: C:/Users/justa/Music\lala.mp3
+2025-06-27 22:15:28 [INFO] __main__: Starting file upload: lala.mp3
+2025-06-27 22:15:28 [DEBUG] __main__: Uploading to: http://localhost:38707/api/soundfragments/files/temp
+2025-06-27 22:15:28 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): localhost:38707
+2025-06-27 22:15:30 [DEBUG] urllib3.connectionpool: http://localhost:38707 "POST /api/soundfragments/files/temp HTTP/1.1" 200 197
+2025-06-27 22:15:30 [DEBUG] __main__: Upload response: 200 - {"id":"0b6c703f-1924-4d53-87bc-cc9a8f52c06e","name":"lala.mp3","status":"uploading","url":null,"percentage":0,"batchId":"temp","thumbnailUrl":null,"type":"application/octet-stream","fullPath":null}
+2025-06-27 22:15:30 [INFO] __main__: File uploaded successfully. ID: 0b6c703f-1924-4d53-87bc-cc9a8f52c06e
+2025-06-27 22:15:30 [INFO] __main__: Starting sound fragment upsert
+2025-06-27 22:15:30 [DEBUG] __main__: Upsert payload: {
+  "title": "lala",
+  "type": "SONG",
+  "files": [
+    {
+      "id": "0b6c703f-1924-4d53-87bc-cc9a8f52c06e",
+      "name": "lala.mp3",
+      "type": "AUDIO"
+    }
+  ]
+}
+2025-06-27 22:15:30 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): localhost:38707
+2025-06-27 22:15:32 [DEBUG] urllib3.connectionpool: http://localhost:38707 "POST /api/soundfragments/ HTTP/1.1" 400 139
+2025-06-27 22:15:32 [DEBUG] __main__: Upsert response: 400 - {"message":"Validation failed","errors":[{"field":"genre","message":"must not be blank"},{"field":"artist","message":"must not be blank"}]}
+2025-06-27 22:15:32 [ERROR] __main__: Sound fragment upsert failed: 400 Client Error: Bad Request for url: http://localhost:38707/api/soundfragments/
+Traceback (most recent call last):
+  File "C:\Users\justa\CascadeProjects\lv-426\soundfragment_crud_test\orchestrator.py", line 130, in upsert_soundfragment
+    response.raise_for_status()
+  File "C:\Users\justa\CascadeProjects\lv-426\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://localhost:38707/api/soundfragments/
+2025-06-27 22:15:32 [CRITICAL] __main__: Flow failed: 400 Client Error: Bad Request for url: http://localhost:38707/api/soundfragments/
